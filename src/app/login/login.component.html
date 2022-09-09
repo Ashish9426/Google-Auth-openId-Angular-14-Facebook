@@ -1,0 +1,18 @@
+<!-- <p>login works!</p>
+<div id="buttonDiv"></div> -->
+
+
+
+
+
+<div class="" *ngIf="user">
+    <img src="{{ user.photoUrl }}">
+    <div>
+        <h4>{{ user.name }}</h4>
+        <p>{{ user.email }}</p>
+    </div>
+</div>
+
+
+<button *ngIf="user" class="btn btn-primary" (click)="signOut()">logout</button>
+<asl-google-signin-button *ngIf="!user"type='icon' size='medium' (click)="signInWithGoogle()">Sign in</asl-google-signin-button>
